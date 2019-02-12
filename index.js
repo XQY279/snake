@@ -77,16 +77,14 @@ function keyPush(evt){
 
 var btn = document.getElementsByClassName("btn");
 btn[0].onclick = function(){
-    alert("滚去学习。。。")
+    xv = 0; yv = -1;
 }
 btn[1].onclick = function(){
-    alert("滚去学习。。。")    
+    xv = -1; yv =0;
 }
 btn[2].onclick = function(){
-    alert("滚去学习。。。")
-    
+    xv = 1; yv =0;    
 }
 btn[3].onclick = function(){
-    alert("滚去学习。。。")
-    
+    xv = 0; yv = 1;    
 }
