@@ -1,0 +1,32 @@
+#item{
+    width: 400px;
+    margin: 0 auto;
+}
+#btns{
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+.btn{
+    width: 33.33%;
+    height: 33.33%;
+    background-color: cornflowerblue;
+    border-radius: 20px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 130px;
+}
+.btn:nth-child(1){
+    margin: 0 auto;
+}
+.btn:nth-child(2){
+    float: left;
+}
+.btn:nth-child(3){
+    float: right;
+}
+.btn:nth-child(4){
+    position: absolute;
+    bottom: 0;
+    left: 133.33px;
+}
