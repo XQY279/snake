@@ -67,14 +67,6 @@ function keyPush(evt){
     }
 }
 
-
-
-
-
-
-
-
-
 var btn = document.getElementsByClassName("btn");
 btn[0].onclick = function(){
     xv = 0; yv = -1;
