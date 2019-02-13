@@ -1,15 +1,15 @@
-// document.oncontextmenu = function(){
-//     return false;   
-// }
-// document.onkeydown = function (e){
-//     if ( e.which == 123
-//     || ( e.which == 83 && (e.metaKey == true || e.ctrlKey == true) )
-//     || ((e.which == 73 || e.which == 74 || e.which == 85) && e.altKey == true && e.metaKey == true)
-//     || ( e.which == 73 && e.ctrlKey == true && e.shiftKey == true)
-//     || ( e.which == 85 && e.ctrlKey == true ) ){
-//         e.preventDefault();
-//     }
-// }
+document.oncontextmenu = function(){
+    return false;   
+}
+document.onkeydown = function (e){
+    if ( e.which == 123
+    || ( e.which == 83 && (e.metaKey == true || e.ctrlKey == true) )
+    || ((e.which == 73 || e.which == 74 || e.which == 85) && e.altKey == true && e.metaKey == true)
+    || ( e.which == 73 && e.ctrlKey == true && e.shiftKey == true)
+    || ( e.which == 85 && e.ctrlKey == true ) ){
+        e.preventDefault();
+    }
+}
 
 window.onload = function(){
     canv = document.getElementById("gc");
@@ -28,14 +28,11 @@ function game(){
     py += yv;
     if(px < 0){
         px = tc - 1;
-    }
-    if(px > tc - 1){
+    } else if(px > tc - 1){
         px = 0;
-    }
-    if(py < 0){
+    } else if(py < 0){
         py = tc - 1;
-    }
-    if(px > tc - 1){
+    }else if(px > tc - 1){
         py = 0;
     }
     ctx.fillStyle = "black";
@@ -79,11 +76,7 @@ function keyPush(evt){
     }
 }
 
-// var btn = document.getElementsByClassName("btn");
-// btn[0].on('tap', function(){
-//     xv = 0; yv = -1;
-//     this.style.background = "pink";
-// })
+
 $('#btnT').tap(function(){
     xv = 0; yv = -1;
 })
@@ -99,29 +92,34 @@ $('#btnB').tap(function(){
 
 
 
-// btn[1].onmousedown = function(){
-//     xv = -1; yv =0;
-//     this.style.background = "pink";
-// }
-// btn[2].onmousedown = function(){
-//     xv = 1; yv =0;    
-//     this.style.background = "pink";
-// }
-// btn[3].onmousedown = function(){
-//     xv = 0; yv = 1;   
-//     this.style.background = "pink";
-// }
+var btn = document.getElementsByClassName("btn");
+btn[0].onmousedown = function(){
+    xv = 0; yv = -1;
+    this.style.background = "pink";
+}
+btn[1].onmousedown = function(){
+    xv = -1; yv =0;
+    this.style.background = "pink";
+}
+btn[2].onmousedown = function(){
+    xv = 1; yv =0;    
+    this.style.background = "pink";
+}
+btn[3].onmousedown = function(){
+    xv = 0; yv = 1;   
+    this.style.background = "pink";
+}
 
 
-// btn[0].onmouseup = function(){
-//     this.style.background = "cornflowerblue";
-// }
-// btn[1].onmouseup = function(){
-//     this.style.background = "cornflowerblue";
-// }
-// btn[2].onmouseup = function(){
-//     this.style.background = "cornflowerblue";
-// }
-// btn[3].onmouseup = function(){
-//     this.style.background = "cornflowerblue";
-// }
+btn[0].onmouseup = function(){
+    this.style.background = "cornflowerblue";
+}
+btn[1].onmouseup = function(){
+    this.style.background = "cornflowerblue";
+}
+btn[2].onmouseup = function(){
+    this.style.background = "cornflowerblue";
+}
+btn[3].onmouseup = function(){
+    this.style.background = "cornflowerblue";
+}

@@ -32,9 +32,6 @@ canvas{
     color: white;
     user-select:none;
 }
-/* .btn:active{
-    background-color: pink;
-} */
 .btn:nth-child(1){
     margin: 0 auto;
 }
