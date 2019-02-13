@@ -8,11 +8,8 @@ document.onkeydown = function (e){
     || ( e.which == 73 && e.ctrlKey == true && e.shiftKey == true)
     || ( e.which == 85 && e.ctrlKey == true ) ){
         e.preventDefault();
-        div1.style.display = 'block';
-        div2.style.display = 'block';
     }
 }
-
 
 window.onload = function(){
     canv = document.getElementById("gc");
@@ -83,15 +80,33 @@ function keyPush(evt){
 }
 
 var btn = document.getElementsByClassName("btn");
-btn[0].onclick = function(){
+btn[0].onmousedown = function(){
     xv = 0; yv = -1;
+    this.style.background = "pink";
 }
-btn[1].onclick = function(){
+btn[1].onmousedown = function(){
     xv = -1; yv =0;
+    this.style.background = "pink";
 }
-btn[2].onclick = function(){
+btn[2].onmousedown = function(){
     xv = 1; yv =0;    
+    this.style.background = "pink";
 }
-btn[3].onclick = function(){
-    xv = 0; yv = 1;    
+btn[3].onmousedown = function(){
+    xv = 0; yv = 1;   
+    this.style.background = "pink";
+}
+
+
+btn[0].onmouseup = function(){
+    this.style.background = "cornflowerblue";
+}
+btn[1].onmouseup = function(){
+    this.style.background = "cornflowerblue";
+}
+btn[2].onmouseup = function(){
+    this.style.background = "cornflowerblue";
+}
+btn[3].onmouseup = function(){
+    this.style.background = "cornflowerblue";
 }
