@@ -72,10 +72,22 @@ function keyPush(evt){
             break;
         case 40: //下
             xv = 0; yv = 1;
+            break;
+            
+        case 65:  //左
+            xv = -1; yv = 0;
+            break;
+        case 87:  //上
+            xv = 0; yv = -1;
+            break;
+        case 68: //右
+            xv = 1; yv = 0;
+            break;
+        case 83: //下
+            xv = 0; yv = 1;
             break;       
     }
 }
-
 
 $('#btnT').tap(function(){
     xv = 0; yv = -1;
@@ -89,8 +101,6 @@ $('#btnR').tap(function(){
 $('#btnB').tap(function(){
     xv = 0; yv = 1;
 })
-
-
 
 var btn = document.getElementsByClassName("btn");
 btn[0].onmousedown = function(){
@@ -109,7 +119,6 @@ btn[3].onmousedown = function(){
     xv = 0; yv = 1;   
     this.style.background = "pink";
 }
-
 
 btn[0].onmouseup = function(){
     this.style.background = "cornflowerblue";
