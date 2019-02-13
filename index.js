@@ -29,8 +29,8 @@ function game(){
     ctx.fillRect(0, 0, canv.width, canv.height);
 
     ctx.fillStyle = "lime";
-    for(var i = 0; i<trail.length; i++){
-        ctx.fillRect(trail[i].x*gs, trail[i].y*gs, gs-2, gs-2);
+    for(var i = 0; i < trail.length; i++){
+        ctx.fillRect(trail[i].x * gs, trail[i].y * gs, gs - 2, gs - 2);
         if(trail[i].x == px && trail[i].y == py){
             tail = 5;
         }
@@ -46,24 +46,23 @@ function game(){
         ay = Math.floor(Math.random() * tc);
     }
     ctx.fillStyle = "red";
-    ctx.fillRect(ax*gs, ay*gs, gs-2, gs-2);
+    ctx.fillRect(ax * gs, ay * gs, gs - 2, gs - 2);
 }
 function keyPush(evt){
     console.log(evt.keyCode)
     switch(evt.keyCode){
         case 37:
-            xv = -1; yv =0;
+            xv = -1; yv = 0;
             break;
         case 38:
             xv = 0; yv = -1;
             break;
         case 39:
-            xv = 1; yv =0;
+            xv = 1; yv = 0;
             break;
         case 40:
             xv = 0; yv = 1;
-            break;
-            
+            break;       
     }
 }
 
