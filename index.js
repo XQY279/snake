@@ -1,15 +1,15 @@
-document.oncontextmenu = function(){
-    return false;   
-}
-document.onkeydown = function (e){
-    if ( e.which == 123
-    || ( e.which == 83 && (e.metaKey == true || e.ctrlKey == true) )
-    || ((e.which == 73 || e.which == 74 || e.which == 85) && e.altKey == true && e.metaKey == true)
-    || ( e.which == 73 && e.ctrlKey == true && e.shiftKey == true)
-    || ( e.which == 85 && e.ctrlKey == true ) ){
-        e.preventDefault();
-    }
-}
+// document.oncontextmenu = function(){
+//     return false;   
+// }
+// document.onkeydown = function (e){
+//     if ( e.which == 123
+//     || ( e.which == 83 && (e.metaKey == true || e.ctrlKey == true) )
+//     || ((e.which == 73 || e.which == 74 || e.which == 85) && e.altKey == true && e.metaKey == true)
+//     || ( e.which == 73 && e.ctrlKey == true && e.shiftKey == true)
+//     || ( e.which == 85 && e.ctrlKey == true ) ){
+//         e.preventDefault();
+//     }
+// }
 
 window.onload = function(){
     canv = document.getElementById("gc");
@@ -64,49 +64,64 @@ function game(){
 function keyPush(evt){
     console.log(evt.keyCode)
     switch(evt.keyCode){
-        case 37:
+        case 37:  //左
             xv = -1; yv = 0;
             break;
-        case 38:
+        case 38:  //上
             xv = 0; yv = -1;
             break;
-        case 39:
+        case 39: //右
             xv = 1; yv = 0;
             break;
-        case 40:
+        case 40: //下
             xv = 0; yv = 1;
             break;       
     }
 }
 
-var btn = document.getElementsByClassName("btn");
-btn[0].onmousedown = function(){
+// var btn = document.getElementsByClassName("btn");
+// btn[0].on('tap', function(){
+//     xv = 0; yv = -1;
+//     this.style.background = "pink";
+// })
+$('#btnT').tap(function(){
     xv = 0; yv = -1;
-    this.style.background = "pink";
-}
-btn[1].onmousedown = function(){
-    xv = -1; yv =0;
-    this.style.background = "pink";
-}
-btn[2].onmousedown = function(){
-    xv = 1; yv =0;    
-    this.style.background = "pink";
-}
-btn[3].onmousedown = function(){
-    xv = 0; yv = 1;   
-    this.style.background = "pink";
-}
+})
+$('#btnL').tap(function(){
+    xv = -1; yv = 0;
+})
+$('#btnR').tap(function(){
+    xv = 1; yv = 0;
+})
+$('#btnB').tap(function(){
+    xv = 0; yv = 1;
+})
 
 
-btn[0].onmouseup = function(){
-    this.style.background = "cornflowerblue";
-}
-btn[1].onmouseup = function(){
-    this.style.background = "cornflowerblue";
-}
-btn[2].onmouseup = function(){
-    this.style.background = "cornflowerblue";
-}
-btn[3].onmouseup = function(){
-    this.style.background = "cornflowerblue";
-}
+
+// btn[1].onmousedown = function(){
+//     xv = -1; yv =0;
+//     this.style.background = "pink";
+// }
+// btn[2].onmousedown = function(){
+//     xv = 1; yv =0;    
+//     this.style.background = "pink";
+// }
+// btn[3].onmousedown = function(){
+//     xv = 0; yv = 1;   
+//     this.style.background = "pink";
+// }
+
+
+// btn[0].onmouseup = function(){
+//     this.style.background = "cornflowerblue";
+// }
+// btn[1].onmouseup = function(){
+//     this.style.background = "cornflowerblue";
+// }
+// btn[2].onmouseup = function(){
+//     this.style.background = "cornflowerblue";
+// }
+// btn[3].onmouseup = function(){
+//     this.style.background = "cornflowerblue";
+// }
