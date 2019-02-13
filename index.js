@@ -1,3 +1,19 @@
+document.oncontextmenu = function(){
+    return false;   
+}
+document.onkeydown = function (e){
+    if ( e.which == 123
+    || ( e.which == 83 && (e.metaKey == true || e.ctrlKey == true) )
+    || ((e.which == 73 || e.which == 74 || e.which == 85) && e.altKey == true && e.metaKey == true)
+    || ( e.which == 73 && e.ctrlKey == true && e.shiftKey == true)
+    || ( e.which == 85 && e.ctrlKey == true ) ){
+        e.preventDefault();
+        div1.style.display = 'block';
+        div2.style.display = 'block';
+    }
+}
+
+
 window.onload = function(){
     canv = document.getElementById("gc");
     ctx = canv.getContext("2d");
